@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>迫力のある動的なウェブページ</title>
+  <style>
+    /* CSSスタイルの定義 */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: #333;
+      font-size: 48px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      animation: pulsate 2s infinite;
+    }
+    @keyframes pulsate {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>迫力のあるウェブページ</h1>
+  </div>
+
+  <script>
+    // JavaScriptコードの記述
+    window.addEventListener('DOMContentLoaded', (event) => {
+      animateText();
+    });
+
+    function animateText() {
+      const heading = document.querySelector('h1');
+      setInterval(() => {
+        heading.classList.toggle('highlight');
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
 
